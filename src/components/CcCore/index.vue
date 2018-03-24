@@ -1,13 +1,11 @@
 <template>
   <div>
-      <ccPreloader v-if="this.$store.state.CcPreloader"></ccPreloader>
-      <CcMainHeader></CcMainHeader>
-      <div>
-          <ccLeftSideBar></ccLeftSideBar>
-          <ccMain>
-              <router-view></router-view>
-          </ccMain>
-      </div>
+    <ccPreloader v-if="this.$store.state.CcPreloader"></ccPreloader>
+    <CcMainHeader></CcMainHeader>
+    <ccLeftSideBar></ccLeftSideBar>
+    <ccMain>
+        <router-view></router-view>
+    </ccMain>
   </div>
 </template>
 
