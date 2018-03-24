@@ -27,6 +27,7 @@ module.exports = {
       '@store': resolve((__dirname, 'src/store')),
       '@router': resolve((__dirname, 'src/router')),
       '@assets': resolve((__dirname, 'src/assets')),
+      '@styles': resolve((__dirname, 'src/styles')),
       '@components': resolve((__dirname, 'src/components')),
       '@CcCore': resolve((__dirname, 'src/components/CcCore')),
     }

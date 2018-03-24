@@ -3,7 +3,7 @@
       <ccPreloader v-if="this.$store.state.CcPreloader"></ccPreloader>
       <CcMainHeader></CcMainHeader>
       <div>
-          <ccLeftSideBar v-if="this.$store.state.CcLeftSideBar_Open"></ccLeftSideBar>
+          <ccLeftSideBar></ccLeftSideBar>
           <ccMain>
               <router-view></router-view>
           </ccMain>
@@ -14,7 +14,7 @@
 <script>
 import CcPreloader from "@components/CcCore/CcPreloader";
 import CcMain from "@CcCore/CcMain";
-import CcMainHeader from "@CcCore/CcMainHeader";
+import CcMainHeader from "@components/CcCore/CcMainHeader";
 import CcLeftSideBar from "@CcCore/CcLeftSideBar";
 export default {
   name: "layout",
