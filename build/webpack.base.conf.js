@@ -4,7 +4,7 @@ const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
 
-function resolve (dir) {
+function resolve(dir) {
   return path.join(__dirname, '..', dir)
 }
 
@@ -23,7 +23,12 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
-      '@': resolve('src'),
+      '@src': resolve('src'),
+      '@store': resolve((__dirname, 'src/store')),
+      '@router': resolve((__dirname, 'src/router')),
+      '@assets': resolve((__dirname, 'src/assets')),
+      '@components': resolve((__dirname, 'src/components')),
+      '@CcCore': resolve((__dirname, 'src/components/CcCore')),
     }
   },
   module: {
