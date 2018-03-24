@@ -1,8 +1,8 @@
 {
-  "name": "shopping_cart",
-  "version": "1.0.0",
-  "description": "Routing - Shopping Cart",
-  "author": "Fullstack.io",
+  "name": "canechair.admin.vue",
+  "version": "0.1.0",
+  "description": "",
+  "author": "Simon X.L.",
   "private": true,
   "scripts": {
     "start": "concurrently \"npm run server\" \"npm run client\"",
@@ -12,9 +12,10 @@
   "dependencies": {
     "axios": "^0.17.1",
     "bulma": "^0.6.2",
-    "font-awesome": "^4.7.0",
+    "bulma-extensions": "^1.0.13",
     "screenfull": "^3.3.2",
     "vue": "^2.5.2",
+    "vue-awesome": "^2.3.5",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
   },
