@@ -10,14 +10,14 @@
       <div class="card">
         <div v-for="item in leftSideBarItems" :key="item.name">
           <div class="card-header" :id="`heading-${item.name}`">
-              <router-link to='/' class="btn btn-link collapsed" data-toggle="collapse" :data-target="`#${item.name}`" aria-expanded="false" :aria-controls="item.name">
+              <router-link :to="item.link? item.link:'#'" class="btn btn-link collapsed" data-toggle="collapse" :data-target="`#${item.name}`" aria-expanded="false" :aria-controls="item.name">
                 {{item.name}}
               </router-link>
           </div>
-            <div v-if="item.subItems &&item.subItems.length>0" :id="item.name" class="collapse" aria-labelledby="`heading-${item.name}`" data-parent="#accordion">
+            <div v-if="item.subItems && item.subItems.length>0 && item.hasSubItem" :id="item.name" class="collapse" aria-labelledby="`heading-${item.name}`" data-parent="#accordion">
               <div class="card-body">
                 <div v-for="subItem in item.subItems" :key="subItem.name">
-                  <router-link to='/'>{{subItem.name}}</router-link>
+                  <router-link :to="subItem.link" v-if="subItem.link">{{subItem.name}}</router-link>
                 </div>
               </div>
             </div>

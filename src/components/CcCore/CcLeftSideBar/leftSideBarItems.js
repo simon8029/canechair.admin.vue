@@ -1,15 +1,18 @@
 const leftSideBarItems = [{
   name: 'Dashboard',
-  icon: "tachometer"
+  icon: "tachometer",
+  link: "/"
 },
 {
   name: 'Base Components',
+  hasSubItem: true,
   subItems: [
     {
       name: 'UI elements',
     },
     {
       name: 'Cards',
+      link: '/Cards'
     },
     {
       name: 'Buttons',

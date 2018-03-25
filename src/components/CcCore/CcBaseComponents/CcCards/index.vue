@@ -1,12 +1,12 @@
 <template>
     <div>
-      CcMain works
+      CcCards works
     </div>
 </template>
 
 <script>
 export default {
-  name: "CcMain"
+  name: "CcCards"
 };
 </script>
 

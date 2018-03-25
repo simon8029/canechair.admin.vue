@@ -2,9 +2,10 @@ const CoreRoutes = [
   {
     path: '/',
     component: resolve => require(['@components/CcCore/CcDashboard'], resolve),
-    meta: {
-      title: "DashBoard"
-    }
+  },
+  {
+    path: '/Cards',
+    component: resolve => require(['@components/CcCore/CcBaseComponents/CcCards'], resolve)
   }
 ];
 

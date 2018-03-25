@@ -3,9 +3,9 @@
     <ccPreloader v-if="this.$store.state.CcPreloader"></ccPreloader>
     <CcMainHeader></CcMainHeader>
     <ccLeftSideBar></ccLeftSideBar>
-    <ccMain class="ccMain" :class="leftSideBarOpen?'leftSideBarOpen':'leftSideBarClose'">
+    <div class="ccMain" :class="leftSideBarOpen?'leftSideBarOpen':'leftSideBarClose'">
         <router-view></router-view>
-    </ccMain>
+    </div>
   </div>
 </template>
 
