@@ -38,7 +38,7 @@ export default {
   transition: margin-left .5s
 }
 .leftSideBarOpen{
-  margin-left: $LeftSideBarWidth;
+  margin-left: $leftSideBar-width;
 }
 .leftSideBarClose{
   margin-left: 0;

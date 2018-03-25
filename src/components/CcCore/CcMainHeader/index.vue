@@ -1,10 +1,25 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light" :class="leftSideBarOpen?'leftSideBarOpen':'leftSideBarClose'">
+  <!-- ====slidable header=== -->
+  <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light" :class="leftSideBarOpen?'leftSideBarOpen':'leftSideBarClose'">
     <div>
       <span v-show="!leftSideBarOpen" @click="openLeftSideBar">
         <i class="fas fa-bars fa-lg"></i>
       </span>
       <router-link to='/' v-if="!leftSideBarOpen" class="navbar-brand">
+        <img src="@assets/img/canechair-logo.png" alt="canechair-logo">
+      </router-link>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div> -->
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+    <div>
+      <span @click="toggleLeftSideBar" style="cursor:pointer">
+        <i class="fas fa-bars fa-lg"></i>
+      </span>
+      <router-link to='/' class="navbar-brand">
         <img src="@assets/img/canechair-logo.png" alt="canechair-logo">
       </router-link>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -57,18 +72,21 @@
     },
     methods: {
       ...mapActions([
-        "openLeftSideBar"
+        "openLeftSideBar",
+        "toggleLeftSideBar"
       ])
     }
   };
 </script>
 <style lang="scss" scoped>
-  // @import '../../../../styles/_variables.scss;
   @import "../../../styles/_variables.scss";
 
+.navbar{
+  height:$header-height;
+}
   .leftSideBarOpen {
     transition: margin-left .5s;
-    margin-left: $LeftSideBarWidth;
+    margin-left: $leftSideBar-width;
   }
 
   .leftSideBarClose {

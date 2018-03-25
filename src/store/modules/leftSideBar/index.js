@@ -16,6 +16,10 @@ const actions = {
 
   closeLeftSideBar({ commit }) {
     commit('TOGGLE_LEFT_SIDE_BAR', false);
+  },
+
+  toggleLeftSideBar({ commit }) {
+    commit('TOGGLE_LEFT_SIDE_BAR', !state.leftSideBarOpen);
   }
 }
 
