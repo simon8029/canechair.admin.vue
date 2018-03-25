@@ -3,7 +3,7 @@
     <ccPreloader v-if="this.$store.state.CcPreloader"></ccPreloader>
     <CcMainHeader></CcMainHeader>
     <ccLeftSideBar></ccLeftSideBar>
-    <ccMain>
+    <ccMain class="ccMain" :class="leftSideBarOpen?'leftSideBarOpen':'leftSideBarClose'">
         <router-view></router-view>
     </ccMain>
   </div>
@@ -14,6 +14,7 @@ import CcPreloader from "@components/CcCore/CcPreloader";
 import CcMain from "@CcCore/CcMain";
 import CcMainHeader from "@components/CcCore/CcMainHeader";
 import CcLeftSideBar from "@CcCore/CcLeftSideBar";
+import { mapGetters } from 'vuex';
 export default {
   name: "layout",
   components: {
@@ -21,10 +22,26 @@ export default {
     CcMain,
     CcMainHeader,
     CcLeftSideBar
+  },
+  computed:{
+    ...mapGetters([
+      "leftSideBarOpen"
+    ])
   }
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
+@import "../../styles/_variables.scss";
+
+.ccMain{
+  transition: margin-left .5s
+}
+.leftSideBarOpen{
+  margin-left: $LeftSideBarWidth;
+}
+.leftSideBarClose{
+  margin-left: 0;
+}
 
 </style>

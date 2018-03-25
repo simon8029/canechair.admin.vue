@@ -2,7 +2,7 @@ import Vue from 'vue';
 import App from './App.vue';
 import store from './store';
 import router from './router';
-import Bootstrap from 'bootstrap';
+import 'bootstrap';
 import 'vue-awesome/icons';
 import Icon from 'vue-awesome/components/Icon';
 
@@ -14,4 +14,3 @@ new Vue({
 });
 
 Vue.component('icon', Icon);
-Vue.use(Bootstrap);
