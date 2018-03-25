@@ -2,10 +2,9 @@ import Vue from 'vue';
 import App from './App.vue';
 import store from './store';
 import router from './router';
+import Bootstrap from 'bootstrap';
 import 'vue-awesome/icons';
 import Icon from 'vue-awesome/components/Icon';
-require('bulma/css/bulma.css');
-require('bulma-extensions/dist/bulma-extensions.min.css');
 
 new Vue({
   el: '#app',
@@ -15,3 +14,4 @@ new Vue({
 });
 
 Vue.component('icon', Icon);
+Vue.use(Bootstrap);

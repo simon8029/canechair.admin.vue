@@ -12,6 +12,7 @@ export default {
 };
 </script>
 
-<style>
-
+<style lang="scss">
+@import "./styles/_custom_bootstrap.scss";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
 </style>

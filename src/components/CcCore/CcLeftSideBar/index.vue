@@ -1,15 +1,10 @@
 <template>
-    <div class="leftSideBar">
-      <div v-for="item in sideBarItems" :key="item.name">
-        <li >
-          <span>{{item.name}}</span>
-        </li>
-      </div>
-    </div>
+
 </template>
 
 <script>
 import sideBarItems from "./SideBarItems.js";
+
 export default {
   name: "CcLeftSideBar",
   data() {
@@ -24,5 +19,12 @@ export default {
 @import "../../../styles/_variables.scss";
 .leftSideBar {
   width: $LeftSideBarWidth;
+}
+.sideBarItemIcon {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+.sideBarItem {
+  text-decoration: none;
 }
 </style>
