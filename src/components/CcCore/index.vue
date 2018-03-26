@@ -35,6 +35,7 @@ export default {
 @import "../../styles/_variables.scss";
 
 .ccMain{
+  margin-top: $header-height+20px;
   transition: margin-left .5s
 }
 .leftSideBarOpen{

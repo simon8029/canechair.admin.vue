@@ -14,12 +14,12 @@
       </button>
     </div> -->
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light static-shadow" >
     <div>
       <span @click="toggleLeftSideBar" style="cursor:pointer">
         <i class="fas fa-bars fa-lg"></i>
       </span>
-      <router-link to='/' class="navbar-brand">
+      <router-link to='#' class="navbar-brand">
         <img src="@assets/img/canechair-logo.png" alt="canechair-logo">
       </router-link>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -80,22 +80,26 @@
 </script>
 <style lang="scss" scoped>
   @import "../../../styles/_variables.scss";
+  @import "../../../styles/_canechair_styles.scss";
 
 .navbar{
   height:$header-height;
 }
-  .leftSideBarOpen {
-    transition: margin-left .5s;
-    margin-left: $leftSideBar-width;
-  }
 
-  .leftSideBarClose {
-    transition: margin-left .5s;
-    margin-left: 0;
-  }
+.leftSideBarOpen {
+  transition: margin-left .5s;
+  margin-left: $leftSideBar-width;
+}
 
-  .avatar {
-    border-radius: 50%;
-    width: 50px
-  }
+.leftSideBarClose {
+  transition: margin-left .5s;
+  margin-left: 0;
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 50px
+} 
+
+
 </style>
